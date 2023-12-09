@@ -105,18 +105,6 @@ with open("input.txt") as file:
 
         cali_sum += int(full_value)
 
-# ftext_ind, ftext_val = find_first_text_num("4sevens34")
-# ltext_ind, ltext_val = find_last_text_num("4sevens34")
-# fchar_ind, fchar_val = find_first_num("4sevens34")
-# lchar_ind, lchar_val = find_last_num("4sevens34")
-
-# tens = get_tens(ftext_ind, ftext_val, fchar_ind, fchar_val)
-# ones = get_ones(ltext_ind, ltext_val, lchar_ind, lchar_val)
-
-# full_value = str(tens) + str(ones)
-
-# cali_sum += int(full_value)
-
 
 print(cali_sum)
 
