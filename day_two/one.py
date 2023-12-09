@@ -1,6 +1,3 @@
-# 12 red
-# 13 green
-# 14 blue
 set_blocks = {
     "red": 12,
     "blue": 14,
