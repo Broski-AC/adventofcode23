@@ -26,7 +26,7 @@ def check_up(y_coord_list, x_coord):
         temp_x_coord -= 1
     
     temp_x_coord_for = x_coord
-    while y_coord_list[temp_x_coord_for + 1] in y_coord_list.values() and y_coord_list[temp_x_coord_for + 1].value != None:
+    while temp_x_coord_for + 1 < 140 and y_coord_list[temp_x_coord_for + 1] in y_coord_list.values() and y_coord_list[temp_x_coord_for + 1].value != None:
         number_set[temp_x_coord_for + 1] = y_coord_list[temp_x_coord_for + 1].value
         temp_x_coord_for += 1
  
@@ -65,7 +65,7 @@ def check_down(y_coord_list, x_coord):
         temp_x_coord -= 1
 
     temp_x_coord_for = x_coord
-    while y_coord_list[temp_x_coord_for + 1] in y_coord_list.values() and y_coord_list[temp_x_coord_for + 1].value != None:
+    while temp_x_coord_for + 1 < 140 and y_coord_list[temp_x_coord_for + 1] in y_coord_list.values() and y_coord_list[temp_x_coord_for + 1].value != None:
         number_set[temp_x_coord_for + 1] = y_coord_list[temp_x_coord_for + 1].value
         temp_x_coord_for += 1
 
