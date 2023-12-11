@@ -1,4 +1,6 @@
 symbol_list = {'*'}
+symbol_list_null = {'@', '#', '$', '%', '&', '=', '/', '-', '.', '+'}
+
 
 class Item:
     def __init__(self, x, y, value = None):
@@ -117,6 +119,14 @@ def check_right(y_coord_list, x_coord):
         
         return [int_string]
 
+def remove_blanks(list):
+    new_list = []
+    for item in list:
+        if item.isdigit():
+            new_list.append(item)
+    
+    return new_list
+
 def main():
     line_num = 0
     larger_dict = {}
@@ -130,7 +140,7 @@ def main():
                 if char in symbol_list:
                     larger_dict[line_num][ind] = Item(ind, line_num)
                     char_list.append(larger_dict[line_num][ind])
-                elif char == '.':
+                elif char in symbol_list_null:
                     larger_dict[line_num][ind] = Item(ind, line_num)
                 elif char == '\n':
                     next
@@ -155,10 +165,11 @@ def main():
             val_u.extend(val_d)
             val_u.extend(val_l)
             val_u.extend(val_r)
-            val_u.remove('')
 
-            if len(val_u) == 2:
-                sum = int(val_u[0]) * int(val_u[1])
+            list = remove_blanks(val_u)
+
+            if len(list) == 2:
+                sum = int(list[0]) * int(list[1])
             else:
                 sum = 0
             
